@@ -1,7 +1,7 @@
 
 class TicketType {
-    constructor(name, price){
-        this.name= name;
+    constructor(type, price){
+        this.type= type;
         this.price = price;
     }
 
@@ -15,18 +15,18 @@ class Event{
         this.description = description;
         this.availableTickets = []; 
     }
-        addAvailableTickets = function(ticketName, price){
-            this.ticketName = ticketName;
+        addAvailableTickets = function(type, price){
+            this.type = type;
             this.price = price;
-            this.availableTickets.push(ticketName, name);
+            this.availableTickets.push(type, price);
             //console.log(this.availableTickets);
      }
       
-        allTickets(){
+        allTickets = function(){
         for(let i=0; i < this.availableTickets.length; i++);
-        return (`All tickets: ${this.availableTickets[i]}`);
+        return (`All tickets: ${this.availableTickets}[i]`);
        // need to finish this fucntion 
-
+        //All tickets: 1. Orchestra ($300) 2. Mezzanine ($200) 3. Balcony ($100)
         //console.log(eventOjb1.allTickets());
     }
 }
@@ -82,3 +82,5 @@ document.addEventListener('DOMContentLoded', () => {
 
 
 console.log(eventObj1.allTickets());
+console.log(eventObj2.allTickets());
+console.log(eventObj3.allTickets());
