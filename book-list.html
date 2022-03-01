@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HTML>
+    <div class="container">
+        <hr>
+        <h1>List of Books</h1>
+        <hr>
+        <div>
+            <div class="row" id="books">
+            </div>
+        </div>
+    </div>
+    
+    <div id="editBookModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+    
+                <div class="modal-body">
+                    <form id="editForm" method="POST">
+                        <div class="form-group">
+                            <label for="isbn">ISBN</label>
+                            <input class="form-control" name="isbn" id="isbn">
+                        </div>
+                        <BR>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input class="form-control" name="title" id="title">
+                        </div>
+                        <BR>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input class="form-control" name="author">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="publish_date">Published Date</label>
+                            <input class="form-control" name="publish_date">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="publisher">Publisher</label>
+                            <input class="form-control" name="publisher">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="numOfPages">Number of Pages</label>
+                            <input class="form-control" name="numOfPages">
+                        </div>
+                        <BR>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="book-list.js"></script>
+</HTML>
